@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Authentic Cabinetry Joinery Symbol Logo Concept</title>
+  <desc id="desc">Abstract interlocking wood joinery mark paired with a compact wordmark.</desc>
+  <rect width="960" height="420" fill="#fcf8f1"/>
+  <g transform="translate(96 90)">
+    <path d="M40 40h118v42h-58v38h58v42H40z" fill="#214634"/>
+    <path d="M122 80h118v42h-58v38h58v42H122z" fill="#c97843"/>
+    <path d="M40 188h200" stroke="#214634" stroke-width="14" stroke-linecap="square"/>
+    <path d="M92 36v170" stroke="#fff8ed" stroke-width="8"/>
+    <path d="M174 76v130" stroke="#fff8ed" stroke-width="8"/>
+  </g>
+  <g transform="translate(430 123)">
+    <text x="0" y="50" font-family="'Palatino Linotype', Palatino, Georgia, serif" font-size="54" fill="#214634">Authentic</text>
+    <text x="0" y="106" font-family="'Palatino Linotype', Palatino, Georgia, serif" font-size="54" fill="#214634">Cabinetry</text>
+    <text x="1" y="152" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="4" fill="#5e6259">PRECISION MILLWORK</text>
+  </g>
+</svg>

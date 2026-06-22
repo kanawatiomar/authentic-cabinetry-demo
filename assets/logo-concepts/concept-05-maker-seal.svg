@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Authentic Cabinetry Maker Seal Logo Concept</title>
+  <desc id="desc">Round maker seal logo concept with cabinet door and monogram detail.</desc>
+  <rect width="960" height="420" fill="#f9f4eb"/>
+  <g transform="translate(84 44)">
+    <circle cx="166" cy="166" r="146" fill="#173f2f"/>
+    <circle cx="166" cy="166" r="120" fill="none" stroke="#fff8ec" stroke-width="5"/>
+    <circle cx="166" cy="166" r="92" fill="none" stroke="#c66d3a" stroke-width="8"/>
+    <path d="M114 207 166 95l52 112h-26l-10-24h-32l-10 24h-26Zm44-44h16l-8-21-8 21Z" fill="#fff8ec"/>
+    <path d="M100 74h132M100 258h132" stroke="#fff8ec" stroke-width="5"/>
+    <text x="166" y="54" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#fff8ec">AUTHENTIC</text>
+    <text x="166" y="291" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="3" fill="#fff8ec">CABINETRY</text>
+  </g>
+  <g transform="translate(432 128)">
+    <text x="0" y="48" font-family="Georgia, 'Times New Roman', serif" font-size="52" fill="#173f2f">Authentic Cabinetry</text>
+    <path d="M2 80h384" stroke="#c66d3a" stroke-width="5"/>
+    <text x="0" y="123" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="4" fill="#5e6259">CUSTOM CABINETRY &amp; ARCHITECTURAL MILLWORK</text>
+    <text x="0" y="166" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#5e6259">Campbell, California</text>
+  </g>
+</svg>

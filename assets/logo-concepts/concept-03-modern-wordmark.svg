@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Authentic Cabinetry Modern Wordmark Logo Concept</title>
+  <desc id="desc">Elegant text-led logo concept with a restrained architectural line detail.</desc>
+  <rect width="960" height="420" fill="#f8f3ea"/>
+  <g transform="translate(103 125)">
+    <text x="0" y="68" font-family="Georgia, 'Times New Roman', serif" font-size="82" letter-spacing="-1" fill="#232620">Authentic</text>
+    <text x="4" y="142" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="700" letter-spacing="11" fill="#232620">CABINETRY</text>
+    <path d="M8 176h568" stroke="#b9693a" stroke-width="5"/>
+    <path d="M605 112h84v64h-84zM626 133h42v22h-42z" fill="none" stroke="#232620" stroke-width="6"/>
+    <text x="8" y="218" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="4" fill="#6b6a62">CUSTOM CABINETRY · BUILT-INS · MILLWORK</text>
+  </g>
+</svg>
