@@ -7,7 +7,7 @@
     <meta name="description" content="Request a custom cabinetry or millwork consultation with Authentic Cabinetry in Campbell, CA.">
     <link rel="icon" href="assets/logo.svg?v=final-pass" type="image/svg+xml">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQGuCO4fY7kP1fPITR1V5T0r4zQqg+M=" crossorigin="">
-    <link rel="stylesheet" href="styles.css?v=client-photo-update">
+    <link rel="stylesheet" href="styles.css?v=form-reviews-update">
   </head>
   <body class="contact-page">
     <header class="site-header" data-header>
@@ -60,7 +60,13 @@
           </div>
         </div>
 
-        <form class="quote-form" action="mailto:Authentic_Cabinetry@outlook.com" method="post" enctype="text/plain">
+        <form class="quote-form" action="https://formsubmit.co/Authentic_Cabinetry@outlook.com" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="New quote request from the Authentic Cabinetry website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://kanawatiomar.github.io/authentic-cabinetry-demo/thank-you.html">
+          <input type="hidden" name="_url" value="https://kanawatiomar.github.io/authentic-cabinetry-demo/contact.html">
+          <input type="hidden" name="_autoresponse" value="Thank you for contacting Authentic Cabinetry. We received your project request and will follow up after reviewing the details.">
+          <label class="form-honeypot" aria-hidden="true">Leave this field empty<input name="_honey" tabindex="-1" autocomplete="off"></label>
           <div class="form-heading">
             <p class="eyebrow">Project Request</p>
             <h2>Share the basics.</h2>
@@ -71,7 +77,7 @@
             <label>Name<input name="Name" autocomplete="name" required></label>
             <label>Phone Number<input name="Phone Number" type="tel" autocomplete="tel" required></label>
           </div>
-          <label>Email Address<input name="Email Address" type="email" autocomplete="email" required></label>
+          <label>Email Address<input name="email" type="email" autocomplete="email" required></label>
           <label>Project Address / City<input name="Project Address or City" placeholder="City or full project address"></label>
 
           <div class="form-row">
@@ -94,10 +100,10 @@
             <label>How Did You Hear About Us?<input name="How Did You Hear About Us"></label>
           </div>
 
-          <label>Upload Photos or Plans<input name="Photos or Plans" type="file" multiple accept=".jpg,.jpeg,.png,.pdf,.heic"></label>
+          <label>Upload Photos or Plans<input name="attachment" type="file" multiple accept=".jpg,.jpeg,.png,.pdf,.heic"><small>JPG, PNG, HEIC, or PDF files, up to 10 MB total.</small></label>
           <label>Additional Notes<textarea name="Additional Notes" rows="6" placeholder="Tell us about the room, cabinetry needs, style, measurements, plans, or site conditions."></textarea></label>
 
-          <button class="button primary" type="submit">Send Request</button>
+          <button class="button primary" type="submit">Send Quote Request</button>
           <p class="form-note">Custom quote only. Pricing is based on the project scope, materials, and details.</p>
         </form>
       </section>
