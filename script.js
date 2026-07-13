@@ -3,6 +3,10 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
 const year = document.querySelector("[data-year]");
 
+if (window.lucide) {
+  window.lucide.createIcons();
+}
+
 if (year) {
   year.textContent = new Date().getFullYear();
 }

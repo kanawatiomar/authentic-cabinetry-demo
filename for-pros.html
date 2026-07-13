@@ -6,7 +6,7 @@
     <title>Professionals | Authentic Cabinetry</title>
     <meta name="description" content="Custom cabinetry and millwork support for designers, architects, builders, contractors, developers, and property managers.">
     <link rel="icon" href="assets/logo.svg?v=final-pass" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=client-photo-update">
+    <link rel="stylesheet" href="styles.css?v=trade-form-icons">
   </head>
   <body>
     <header class="site-header" data-header>
@@ -44,8 +44,8 @@
           <h2>Craftsmanship, communication, and coordination.</h2>
           <p>Whether the scope is a single custom kitchen or a larger residential or commercial project, Authentic Cabinetry is focused on making the cabinetry portion clear and dependable.</p>
           <div class="service-actions trade-actions">
-            <a href="contact.html">Request a Quote</a>
-            <a href="contact.html">Send Plans or Specs</a>
+            <a href="#trade-inquiry">Request a Trade Quote</a>
+            <a href="#trade-inquiry">Send Plans or Specs</a>
           </div>
         </div>
         <ul class="check-list">
@@ -64,13 +64,13 @@
           <h2 id="trade-workflow-title">A workflow built for coordination.</h2>
         </div>
         <div class="workflow-diagram">
-          <article><span>01</span><strong>Consultation</strong></article>
-          <article><span>02</span><strong>Review Plans</strong></article>
-          <article><span>03</span><strong>Estimate & Scope</strong></article>
-          <article><span>04</span><strong>Shop Drawings</strong></article>
-          <article><span>05</span><strong>Fabrication</strong></article>
-          <article><span>06</span><strong>Installation</strong></article>
-          <article><span>07</span><strong>Final Walkthrough</strong></article>
+          <article><i class="process-icon" data-lucide="messages-square" aria-hidden="true"></i><span>01</span><strong>Consultation</strong></article>
+          <article><i class="process-icon" data-lucide="file-search" aria-hidden="true"></i><span>02</span><strong>Review Plans</strong></article>
+          <article><i class="process-icon" data-lucide="calculator" aria-hidden="true"></i><span>03</span><strong>Estimate & Scope</strong></article>
+          <article><i class="process-icon" data-lucide="drafting-compass" aria-hidden="true"></i><span>04</span><strong>Shop Drawings</strong></article>
+          <article><i class="process-icon" data-lucide="hammer" aria-hidden="true"></i><span>05</span><strong>Fabrication</strong></article>
+          <article><i class="process-icon" data-lucide="drill" aria-hidden="true"></i><span>06</span><strong>Installation</strong></article>
+          <article><i class="process-icon" data-lucide="clipboard-check" aria-hidden="true"></i><span>07</span><strong>Final Walkthrough</strong></article>
         </div>
       </section>
 
@@ -80,11 +80,93 @@
           <h2 id="trade-resources-title">Send the information that helps us quote accurately.</h2>
         </div>
         <div class="resource-grid">
-          <a href="contact.html"><strong>Request a Quote</strong><span>Share project details, city, timeline, and scope.</span></a>
-          <a href="contact.html"><strong>Upload Plans or PDFs</strong><span>Use the quote form upload field or email drawings directly.</span></a>
-          <a href="contact.html"><strong>Schedule a Consultation</strong><span>Start a conversation before fabrication details are finalized.</span></a>
-          <a href="contact.html"><strong>Submit Project Specifications</strong><span>Send finish direction, site notes, dimensions, and drawings.</span></a>
+          <a href="#trade-inquiry"><strong>Request a Quote</strong><span>Share project details, city, timeline, and scope.</span></a>
+          <a href="#trade-inquiry"><strong>Upload Plans or PDFs</strong><span>Attach drawings, specifications, and reference files.</span></a>
+          <a href="#trade-inquiry"><strong>Request a Consultation</strong><span>Share preferred timing for a project conversation.</span></a>
+          <a href="#trade-inquiry"><strong>Submit Project Specifications</strong><span>Send finish direction, site notes, dimensions, and drawings.</span></a>
         </div>
+      </section>
+
+      <section class="contact-section trade-inquiry" id="trade-inquiry" aria-labelledby="trade-inquiry-title">
+        <div class="contact-details">
+          <p class="eyebrow">Professional Project Inquiry</p>
+          <h2 id="trade-inquiry-title">Start with the plans, scope, and schedule.</h2>
+          <p>This form is for designers, contractors, builders, architects, developers, and property managers. Share the information available now, and Authentic Cabinetry will follow up about estimating and next steps.</p>
+          <div class="quote-help">
+            <p class="eyebrow">Helpful to include</p>
+            <ul>
+              <li>Plans, elevations, specifications, or finish schedules</li>
+              <li>Project address, current phase, and target installation date</li>
+              <li>Cabinetry scope and any site coordination requirements</li>
+              <li>Preferred timing for a consultation</li>
+            </ul>
+          </div>
+          <a class="button secondary" href="tel:+14085599475">Call (408) 559-9475</a>
+        </div>
+
+        <form class="quote-form" action="https://formsubmit.co/Authentic_Cabinetry@outlook.com" method="post" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="New professional project inquiry from the Authentic Cabinetry website">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://kanawatiomar.github.io/authentic-cabinetry-demo/thank-you.html">
+          <input type="hidden" name="_url" value="https://kanawatiomar.github.io/authentic-cabinetry-demo/for-pros.html">
+          <input type="hidden" name="_autoresponse" value="Thank you for contacting Authentic Cabinetry. We received your professional project inquiry and will follow up after reviewing the details.">
+          <label class="form-honeypot" aria-hidden="true">Leave this field empty<input name="_honey" tabindex="-1" autocomplete="off"></label>
+
+          <div class="form-heading">
+            <p class="eyebrow">Trade Partner Request</p>
+            <h2>Share the project details.</h2>
+          </div>
+
+          <div class="form-row">
+            <label>Contact Name<input name="Contact Name" autocomplete="name" required></label>
+            <label>Company or Organization<input name="Company or Organization" autocomplete="organization" required></label>
+          </div>
+
+          <div class="form-row">
+            <label>Email Address<input name="email" type="email" autocomplete="email" required></label>
+            <label>Phone Number<input name="Phone Number" type="tel" autocomplete="tel" required></label>
+          </div>
+
+          <div class="form-row">
+            <label>Professional Role
+              <select name="Professional Role" required>
+                <option value="">Select one</option>
+                <option>Interior Designer</option>
+                <option>General Contractor</option>
+                <option>Builder</option>
+                <option>Architect</option>
+                <option>Developer</option>
+                <option>Property Manager</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>Project Address / City<input name="Project Address or City" placeholder="City or full project address"></label>
+          </div>
+
+          <div class="form-row">
+            <label>Project Type<input name="Project Type" placeholder="Kitchen, built-ins, residential, commercial, or other"></label>
+            <label>Project Stage
+              <select name="Project Stage">
+                <option value="">Select one</option>
+                <option>Early Planning</option>
+                <option>Design Development</option>
+                <option>Permit / Pricing</option>
+                <option>Ready for Cabinetry Estimate</option>
+                <option>Construction Underway</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>Target Timeline<input name="Target Timeline" placeholder="Desired fabrication or installation timing"></label>
+            <label>Preferred Consultation Timing<input name="Preferred Consultation Timing" placeholder="Days or times that work best"></label>
+          </div>
+
+          <label>Upload Plans, PDFs, or Specifications<input name="attachment" type="file" multiple accept=".jpg,.jpeg,.png,.pdf,.heic,.doc,.docx,.xls,.xlsx"><small>Images, PDFs, Word documents, or spreadsheets, up to 10 MB total.</small></label>
+          <label>Project Specifications and Notes<textarea name="Project Specifications and Notes" rows="7" placeholder="Describe the cabinetry scope, finishes, dimensions, schedule, and coordination requirements."></textarea></label>
+
+          <button class="button primary" type="submit">Send Professional Inquiry</button>
+        </form>
       </section>
 
       <section class="content-band page-split">
@@ -110,6 +192,7 @@
       <a class="footer-quote" href="contact.html">Request a Quote</a>
       <p>&copy; <span data-year></span> Authentic Cabinetry. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+    <script src="script.js?v=trade-form-icons"></script>
   </body>
 </html>
