@@ -2022,6 +2022,58 @@ body:not(.about-page) .page-hero::after {
   color: var(--white);
 }
 
+.process-workflow {
+  background: linear-gradient(110deg, #153d2c 0%, var(--green) 58%, #285f45 100%);
+}
+
+.process-workflow .icon-process {
+  gap: 12px;
+  background: transparent;
+}
+
+.process-workflow .icon-process article {
+  min-height: 330px;
+  align-content: start;
+  gap: 14px;
+  padding: 34px 24px 30px;
+  border: 1px solid rgba(255, 253, 248, 0.18);
+  background: #2f684b;
+  color: var(--white);
+}
+
+.process-workflow .icon-process article:nth-child(even) {
+  background: #b95827;
+}
+
+.process-workflow .icon-process article:last-child {
+  background: #183f2e;
+}
+
+.process-workflow .process-icon {
+  width: 58px;
+  height: 58px;
+  padding: 13px;
+  border-color: rgba(255, 253, 248, 0.42);
+  color: var(--white);
+}
+
+.process-workflow .icon-process span {
+  color: #ffd0ad;
+}
+
+.process-workflow .icon-process strong {
+  color: var(--white);
+  font-size: clamp(24px, 2vw, 29px);
+  line-height: 1.12;
+}
+
+.process-workflow .icon-process p {
+  margin: 0;
+  color: rgba(255, 253, 248, 0.86);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
 .process-list {
   max-width: var(--max);
   margin: 0 auto;
