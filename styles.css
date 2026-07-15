@@ -2268,6 +2268,16 @@ body:not(.about-page) .page-hero::after {
   padding: 16px 16px 16px 46px;
   border: 1px solid rgba(255, 250, 241, 0.16);
   background: rgba(255, 250, 241, 0.045);
+  transform-origin: center;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.check-list li:hover {
+  z-index: 1;
+  transform: translateY(-3px) scale(1.015);
+  border-color: rgba(240, 154, 62, 0.52);
+  background: rgba(255, 250, 241, 0.09);
+  box-shadow: 0 14px 30px rgba(10, 36, 25, 0.2);
 }
 
 .check-list li::before {
@@ -2280,6 +2290,16 @@ body:not(.about-page) .page-hero::after {
   border-left: 2px solid var(--orange-2);
   border-bottom: 2px solid var(--orange-2);
   transform: rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .check-list li {
+    transition: none;
+  }
+
+  .check-list li:hover {
+    transform: none;
+  }
 }
 
 .about-section {
