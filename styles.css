@@ -892,7 +892,7 @@ body:not(.about-page) .page-hero::after {
   transform: translateY(-4px);
 }
 
-.project-photo::after {
+.home-gallery-grid .project-photo::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -900,8 +900,7 @@ body:not(.about-page) .page-hero::after {
   pointer-events: none;
 }
 
-.project-photo span,
-.project-photo figcaption {
+.project-photo span {
   position: absolute;
   left: 18px;
   right: 18px;
