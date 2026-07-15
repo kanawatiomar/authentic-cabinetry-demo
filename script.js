@@ -2,6 +2,7 @@ const header = document.querySelector("[data-header]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const nav = document.querySelector("[data-nav]");
 const year = document.querySelector("[data-year]");
+const headerCta = document.querySelector(".header-cta");
 
 if (window.lucide) {
   window.lucide.createIcons();
@@ -9,6 +10,15 @@ if (window.lucide) {
 
 if (year) {
   year.textContent = new Date().getFullYear();
+}
+
+if (headerCta) {
+  const floatingCta = document.createElement("a");
+  floatingCta.className = "floating-quote-cta";
+  floatingCta.href = headerCta.getAttribute("href") || "contact.html#quote-form";
+  floatingCta.textContent = "Request a Quote";
+  floatingCta.setAttribute("aria-label", "Request a custom cabinetry quote");
+  document.body.append(floatingCta);
 }
 
 if (header && navToggle && nav) {

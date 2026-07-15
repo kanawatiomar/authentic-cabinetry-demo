@@ -7,7 +7,7 @@
     <meta name="description" content="Request a custom cabinetry or millwork consultation with Authentic Cabinetry in Campbell, CA.">
     <link rel="icon" href="assets/logo.svg?v=final-pass" type="image/svg+xml">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQGuCO4fY7kP1fPITR1V5T0r4zQqg+M=" crossorigin="">
-    <link rel="stylesheet" href="styles.css?v=form-reviews-update">
+    <link rel="stylesheet" href="styles.css?v=persistent-quote">
   </head>
   <body class="contact-page">
     <header class="site-header" data-header>
@@ -24,7 +24,7 @@
         <a href="about.html">About</a>
         <a href="contact.html" aria-current="page">Request Quote</a>
       </nav>
-      <a class="header-cta" href="contact.html">Request a Quote</a>
+      <a class="header-cta" href="#quote-form">Request a Quote</a>
     </header>
 
     <main>
@@ -60,7 +60,7 @@
           </div>
         </div>
 
-        <form class="quote-form" action="https://formsubmit.co/Authentic_Cabinetry@outlook.com" method="post" enctype="multipart/form-data">
+        <form class="quote-form" id="quote-form" action="https://formsubmit.co/Authentic_Cabinetry@outlook.com" method="post" enctype="multipart/form-data">
           <input type="hidden" name="_subject" value="New quote request from the Authentic Cabinetry website">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_next" value="https://kanawatiomar.github.io/authentic-cabinetry-demo/thank-you.html">
@@ -156,7 +156,7 @@
       <p>&copy; <span data-year></span> Authentic Cabinetry. All rights reserved.</p>
     </footer>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=persistent-quote"></script>
   </body>
 </html>
 
