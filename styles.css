@@ -873,8 +873,8 @@ body:not(.about-page) .page-hero::after {
   width: min(1500px, calc(100vw - 96px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.25fr 0.9fr 0.9fr;
-  grid-auto-rows: clamp(230px, 18vw, 330px);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-auto-rows: clamp(280px, 26vw, 430px);
   gap: clamp(14px, 1.8vw, 24px);
 }
 
