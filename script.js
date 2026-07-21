@@ -16,8 +16,8 @@ if (headerCta) {
   const floatingCta = document.createElement("a");
   floatingCta.className = "floating-quote-cta";
   floatingCta.href = headerCta.getAttribute("href") || "contact.html#quote-form";
-  floatingCta.textContent = "Request a Quote";
-  floatingCta.setAttribute("aria-label", "Request a custom cabinetry quote");
+  floatingCta.textContent = "Contact Us";
+  floatingCta.setAttribute("aria-label", "Contact Authentic Cabinetry");
   document.body.append(floatingCta);
 }
 
