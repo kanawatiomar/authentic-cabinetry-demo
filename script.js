@@ -37,6 +37,65 @@ if (header && navToggle && nav) {
   });
 }
 
+const galleryNav = document.querySelector("[data-gallery-nav]");
+
+if (galleryNav) {
+  const galleryLinks = [...galleryNav.querySelectorAll('a[href^="#"]')];
+  const gallerySections = galleryLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean);
+  let activeGalleryId = "";
+
+  const updateGalleryNavigation = () => {
+    const headerHeight = header ? header.offsetHeight : 0;
+    document.documentElement.style.setProperty("--site-header-height", `${headerHeight}px`);
+
+    const activationLine = headerHeight + galleryNav.offsetHeight + 32;
+    let activeSection = gallerySections[0];
+
+    gallerySections.forEach((section) => {
+      if (section.getBoundingClientRect().top <= activationLine) {
+        activeSection = section;
+      }
+    });
+
+    const activeSectionChanged = activeGalleryId !== activeSection.id;
+
+    galleryLinks.forEach((link) => {
+      const isActive = link.getAttribute("href") === `#${activeSection.id}`;
+      if (isActive) {
+        link.setAttribute("aria-current", "location");
+        if (activeSectionChanged) {
+          link.scrollIntoView({ block: "nearest", inline: "nearest" });
+        }
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+
+    activeGalleryId = activeSection.id;
+  };
+
+  let galleryScrollFrame;
+  const requestGalleryNavigationUpdate = () => {
+    if (galleryScrollFrame) return;
+    galleryScrollFrame = window.requestAnimationFrame(() => {
+      updateGalleryNavigation();
+      galleryScrollFrame = null;
+    });
+  };
+
+  updateGalleryNavigation();
+  window.addEventListener("scroll", requestGalleryNavigationUpdate, { passive: true });
+  window.addEventListener("resize", requestGalleryNavigationUpdate);
+
+  if ("ResizeObserver" in window && header) {
+    const stickyNavObserver = new ResizeObserver(requestGalleryNavigationUpdate);
+    stickyNavObserver.observe(header);
+    stickyNavObserver.observe(galleryNav);
+  }
+}
+
 const serviceMapEl = document.querySelector("[data-service-map]");
 
 if (serviceMapEl && window.L) {

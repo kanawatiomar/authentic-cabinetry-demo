@@ -6,7 +6,7 @@
     <title>Gallery | Authentic Cabinetry</title>
     <meta name="description" content="Browse kitchen cabinetry, bathroom vanities, closets, storage, and built-in project photos by Authentic Cabinetry.">
     <link rel="icon" href="assets/logo.svg?v=final-pass" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=persistent-quote">
+    <link rel="stylesheet" href="styles.css?v=sticky-gallery-nav">
   </head>
   <body>
     <header class="site-header" data-header>
@@ -32,17 +32,20 @@
           <p class="eyebrow">Gallery</p>
           <h1>Recent cabinetry and storage projects.</h1>
           <p>Browse completed projects by category, including kitchens, bathroom vanities, closets, storage, and built-ins.</p>
-          <div class="gallery-jump-nav" aria-label="Gallery categories">
-            <a href="#kitchens">Kitchens</a>
-            <a href="#vanities">Bathroom Vanities</a>
-            <a href="#storage">Closets & Storage</a>
-            <a href="#built-ins">Built-ins</a>
-          </div>
         </div>
         <figure class="portfolio-hero-image">
           <img src="assets/projects/kitchen-05.jpg" alt="Light kitchen cabinetry with large island and green lower cabinets">
         </figure>
       </section>
+
+      <nav class="gallery-sticky-nav" aria-label="Gallery categories" data-gallery-nav>
+        <div class="gallery-jump-nav">
+          <a href="#kitchens">Kitchens</a>
+          <a href="#vanities">Bathroom Vanities</a>
+          <a href="#storage">Closets & Storage</a>
+          <a href="#built-ins">Built-ins</a>
+        </div>
+      </nav>
 
       <section class="portfolio-category" id="kitchens" aria-labelledby="kitchens-title">
         <div class="portfolio-category-heading">
@@ -109,6 +112,6 @@
       <a class="footer-quote" href="contact.html">Request a Quote</a>
       <p>&copy; <span data-year></span> Authentic Cabinetry. All rights reserved.</p>
     </footer>
-    <script src="script.js?v=persistent-quote"></script>
+    <script src="script.js?v=sticky-gallery-nav"></script>
   </body>
 </html>
