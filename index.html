@@ -6,7 +6,7 @@
     <title>Authentic Cabinetry | Custom Cabinetry & Millwork in Campbell, CA</title>
     <meta name="description" content="Authentic Cabinetry designs, fabricates, and installs custom cabinetry, built-ins, closets, vanities, and architectural millwork for homes and businesses across the Bay Area and Northern California.">
     <link rel="icon" href="assets/logo.svg?v=final-pass" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=home-timeline-refresh-three-categories">
+    <link rel="stylesheet" href="styles.css?v=contact-modal-2">
   </head>
   <body>
     <header class="site-header" data-header>
@@ -29,10 +29,10 @@
         <a href="process.html">Process</a>
         <a href="for-pros.html">Professionals</a>
         <a href="about.html">About</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="#contact-form">Contact Us</a>
       </nav>
 
-      <a class="header-cta" href="contact.html#quote-form">Contact Us</a>
+      <a class="header-cta" href="#contact-form">Contact Us</a>
     </header>
 
     <main id="top">
@@ -50,7 +50,7 @@
           <p class="hero-lede">Kitchens, vanities, built-ins, closets, and storage solutions made for the way each space is used.</p>
           <div class="hero-actions">
             <a class="button primary" href="portfolio.html">View Gallery</a>
-            <a class="button secondary" href="contact.html">Contact Us</a>
+            <a class="button secondary" href="#contact-form">Contact Us</a>
           </div>
         </div>
       </section>
@@ -110,6 +110,22 @@
         </div>
       </section>
 
+      <section class="service-map-section" aria-labelledby="service-map-title">
+        <div class="service-map-copy">
+          <p class="eyebrow">Service Area</p>
+          <h2 id="service-map-title">Serving the Bay Area and Northern California.</h2>
+          <p>Authentic Cabinetry is based in Campbell and works throughout the Bay Area and select Northern California communities.</p>
+        </div>
+        <div class="service-map-card">
+          <div
+            id="service-area-map"
+            class="service-area-map"
+            data-service-map
+            role="img"
+            aria-label="Interactive map outlining Authentic Cabinetry's Bay Area and Northern California service area"></div>
+        </div>
+      </section>
+
       <section class="home-reviews" aria-labelledby="home-reviews-title">
         <div>
           <p class="eyebrow">Reviews</p>
@@ -121,11 +137,11 @@
 
       <section class="cta-band">
         <div>
-          <p class="eyebrow">Ready to talk?</p>
-          <h2>Request a custom cabinetry quote.</h2>
-          <p>Send the project type, location, timeline, and any photos or plans that help explain the space.</p>
+          <p class="eyebrow">Contact Us</p>
+          <h2>Tell us how to reach you.</h2>
+          <p>Leave your name, email, and phone number. Add project details if you would like.</p>
         </div>
-        <a class="button primary" href="contact.html">Start a Quote</a>
+        <a class="button primary" href="#contact-form">Contact Us</a>
       </section>
     </main>
 
@@ -135,11 +151,12 @@
         <span>Authentic Cabinetry</span>
       </div>
       <p>Custom cabinetry and architectural millwork in Campbell, California.</p>
-      <a class="footer-quote" href="contact.html">Contact Us</a>
+      <a class="footer-quote" href="#contact-form">Contact Us</a>
       <p>&copy; <span data-year></span> Authentic Cabinetry. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
-    <script src="script.js?v=contact-us-label"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="script.js?v=contact-modal-2"></script>
   </body>
 </html>

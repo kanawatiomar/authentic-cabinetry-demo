@@ -2820,6 +2820,90 @@ textarea:focus {
   font-size: 13px;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+.contact-dialog {
+  width: min(620px, calc(100vw - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+}
+
+.contact-dialog::backdrop {
+  background: rgba(20, 38, 29, 0.74);
+  backdrop-filter: blur(6px);
+}
+
+.contact-dialog-shell {
+  position: relative;
+  max-height: calc(100dvh - 32px);
+  padding: clamp(24px, 5vw, 42px);
+  overflow-y: auto;
+  border-top: 6px solid var(--orange);
+  background: var(--paper);
+  box-shadow: 0 28px 80px rgba(14, 29, 21, 0.34);
+}
+
+.contact-dialog-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgba(31, 79, 58, 0.24);
+  background: var(--white);
+  color: var(--green);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, color 180ms ease;
+}
+
+.contact-dialog-close:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  transform: scale(1.05);
+}
+
+.contact-dialog-heading {
+  padding-right: 48px;
+}
+
+.contact-dialog-heading h2 {
+  margin-bottom: 10px;
+  color: var(--green);
+  font-size: clamp(32px, 5vw, 46px);
+}
+
+.contact-dialog-heading p:not(.eyebrow) {
+  margin-bottom: 22px;
+  color: var(--muted);
+}
+
+.contact-modal-form {
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.contact-modal-form textarea {
+  min-height: 112px;
+}
+
+.contact-modal-form .button {
+  width: 100%;
+  margin-top: 4px;
+}
+
 .service-map-section {
   display: grid;
   grid-template-columns: minmax(0, 0.56fr) minmax(420px, 0.9fr);

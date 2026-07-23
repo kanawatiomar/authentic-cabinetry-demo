@@ -12,10 +12,82 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+const contactDialog = document.createElement("dialog");
+contactDialog.className = "contact-dialog";
+contactDialog.id = "contact-form";
+contactDialog.setAttribute("aria-labelledby", "contact-dialog-title");
+contactDialog.innerHTML = `
+  <div class="contact-dialog-shell">
+    <button class="contact-dialog-close" type="button" aria-label="Close contact form" data-contact-close>&times;</button>
+    <div class="contact-dialog-heading">
+      <p class="eyebrow">Contact Us</p>
+      <h2 id="contact-dialog-title">How can we reach you?</h2>
+      <p>Leave your contact information and we will get back to you.</p>
+    </div>
+    <form class="quote-form contact-modal-form" action="https://formsubmit.co/Authentic_Cabinetry@outlook.com" method="post">
+      <input type="hidden" name="_subject" value="New contact request from the Authentic Cabinetry website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://kanawatiomar.github.io/authentic-cabinetry-demo/thank-you.html">
+      <input type="hidden" name="_url" value="https://kanawatiomar.github.io/authentic-cabinetry-demo/">
+      <input type="hidden" name="_autoresponse" value="Thank you for contacting Authentic Cabinetry. We received your information and will follow up soon.">
+      <label class="form-honeypot" aria-hidden="true">Leave this field empty<input name="_honey" tabindex="-1" autocomplete="off"></label>
+      <label>Name<input name="Name" autocomplete="name" required></label>
+      <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      <label>Phone Number<input name="Phone Number" type="tel" autocomplete="tel" required></label>
+      <label>Tell us more about your project (optional)<textarea name="Project Details" rows="4"></textarea></label>
+      <button class="button primary" type="submit">Send</button>
+    </form>
+  </div>`;
+document.body.append(contactDialog);
+
+const openContactDialog = () => {
+  if (!contactDialog.open) {
+    contactDialog.showModal();
+  }
+  document.body.classList.add("modal-open");
+  window.requestAnimationFrame(() => contactDialog.querySelector('input[name="Name"]')?.focus());
+};
+
+const closeContactDialog = () => {
+  if (contactDialog.open) {
+    contactDialog.close();
+  }
+};
+
+document.addEventListener("click", (event) => {
+  const contactLink = event.target.closest('a[href^="contact.html"], a[href="#contact-form"], [data-contact-open]');
+  if (contactLink) {
+    event.preventDefault();
+    openContactDialog();
+    return;
+  }
+
+  if (event.target.closest("[data-contact-close]")) {
+    closeContactDialog();
+  }
+});
+
+contactDialog.addEventListener("click", (event) => {
+  if (event.target === contactDialog) {
+    closeContactDialog();
+  }
+});
+
+contactDialog.addEventListener("close", () => {
+  document.body.classList.remove("modal-open");
+  if (window.location.hash === "#contact-form") {
+    window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+  }
+});
+
+if (window.location.hash === "#contact-form") {
+  openContactDialog();
+}
+
 if (headerCta) {
   const floatingCta = document.createElement("a");
   floatingCta.className = "floating-quote-cta";
-  floatingCta.href = headerCta.getAttribute("href") || "contact.html#quote-form";
+  floatingCta.href = headerCta.getAttribute("href") || "#contact-form";
   floatingCta.textContent = "Contact Us";
   floatingCta.setAttribute("aria-label", "Contact Authentic Cabinetry");
   document.body.append(floatingCta);
