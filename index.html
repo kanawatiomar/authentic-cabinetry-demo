@@ -6,7 +6,7 @@
     <title>Authentic Cabinetry | Custom Cabinetry & Millwork in Campbell, CA</title>
     <meta name="description" content="Authentic Cabinetry designs, fabricates, and installs custom cabinetry, built-ins, closets, vanities, and architectural millwork for homes and businesses across the Bay Area and Northern California.">
     <link rel="icon" href="assets/logo.svg?v=final-pass" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css?v=contact-modal-2">
+    <link rel="stylesheet" href="styles.css?v=reviews-carousel">
   </head>
   <body>
     <header class="site-header" data-header>
@@ -96,12 +96,44 @@
       </section>
 
       <section class="home-reviews" aria-labelledby="home-reviews-title">
-        <div>
+        <div class="home-reviews-intro">
           <p class="eyebrow">Reviews</p>
-          <h2 id="home-reviews-title">View Authentic Cabinetry on Google.</h2>
-          <p>Visit the Google Business profile for current reviews and business details.</p>
+          <h2 id="home-reviews-title">Built well. Recommended often.</h2>
+          <p>Hear what customers say about the quality, service, and care behind their projects.</p>
+          <div class="review-rating" aria-label="4.8 out of 5 stars on Google">
+            <span aria-hidden="true">★★★★★</span>
+            <strong>4.8 on Google</strong>
+          </div>
+          <a class="button review-link" href="https://share.google/Ay8kBWk230bGjixUl" target="_blank" rel="noopener">View All Google Reviews</a>
         </div>
-        <a class="button secondary" href="https://share.google/Ay8kBWk230bGjixUl" target="_blank" rel="noopener">View Google Reviews</a>
+        <div class="review-carousel" data-review-carousel aria-roledescription="carousel" aria-label="Customer reviews">
+          <div class="review-track" aria-live="polite">
+            <blockquote class="review-slide is-active" data-review-slide aria-hidden="false">
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>“Seamless from start to finish.”</p>
+              <footer><strong>Google reviewer</strong><span>January 2022</span></footer>
+            </blockquote>
+            <blockquote class="review-slide" data-review-slide aria-hidden="true">
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>“Tim gives great suggestions and does fantastic work.”</p>
+              <footer><strong>Google reviewer</strong><span>August 2021</span></footer>
+            </blockquote>
+            <blockquote class="review-slide" data-review-slide aria-hidden="true">
+              <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p>“Excellent quality, fair prices, and great design support.”</p>
+              <footer><strong>Google reviewer</strong><span>June 2021</span></footer>
+            </blockquote>
+          </div>
+          <div class="review-controls">
+            <button class="review-arrow" type="button" data-review-prev aria-label="Show previous review">&#8592;</button>
+            <div class="review-dots" aria-label="Choose a review">
+              <button type="button" data-review-dot aria-label="Show review 1" aria-current="true"></button>
+              <button type="button" data-review-dot aria-label="Show review 2"></button>
+              <button type="button" data-review-dot aria-label="Show review 3"></button>
+            </div>
+            <button class="review-arrow" type="button" data-review-next aria-label="Show next review">&#8594;</button>
+          </div>
+        </div>
       </section>
 
     </main>
@@ -112,10 +144,9 @@
         <span>Authentic Cabinetry</span>
       </div>
       <p>Custom cabinetry and architectural millwork in Campbell, California.</p>
-      <a class="footer-quote" href="#contact-form">Contact Us</a>
-      <p>&copy; <span data-year></span> Authentic Cabinetry. All rights reserved.</p>
+      <p class="footer-copyright">&copy; <span data-year></span></p>
     </footer>
 
-    <script src="script.js?v=contact-modal-2"></script>
+    <script src="script.js?v=reviews-carousel"></script>
   </body>
 </html>
