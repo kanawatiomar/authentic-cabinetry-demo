@@ -30,7 +30,10 @@ if (reviewCarousel) {
 
     reviewSlides.forEach((slide, slideIndex) => {
       const isActive = slideIndex === activeReview;
+      const relativePosition = (slideIndex - activeReview + reviewSlides.length) % reviewSlides.length;
       slide.classList.toggle("is-active", isActive);
+      slide.classList.toggle("is-next", relativePosition === 1);
+      slide.classList.toggle("is-prev", relativePosition === reviewSlides.length - 1);
       slide.setAttribute("aria-hidden", String(!isActive));
     });
 
