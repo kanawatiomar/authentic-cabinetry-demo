@@ -2445,6 +2445,23 @@ body:not(.about-page) .page-hero::after {
   color: var(--white);
 }
 
+.process-workflow-heading {
+  width: min(1320px, calc(100vw - 96px));
+  margin: 0 auto clamp(30px, 4vw, 48px);
+  text-align: center;
+}
+
+.process-workflow-heading h2 {
+  max-width: 780px;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--white);
+}
+
+.process-workflow-heading .eyebrow {
+  color: var(--orange-2);
+}
+
 .process-workflow {
   background:
     radial-gradient(circle at 16% 22%, rgba(255, 253, 248, 0.08), transparent 26%),
@@ -2525,6 +2542,13 @@ body:not(.about-page) .page-hero::after {
   color: rgba(255, 253, 248, 0.86);
   font-size: 15px;
   line-height: 1.55;
+}
+
+@media (max-width: 680px) {
+  .process-workflow-heading {
+    width: min(100%, calc(100vw - 36px));
+    text-align: left;
+  }
 }
 
 .process-list {
