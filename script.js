@@ -12,6 +12,94 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+const reviewCarousel = document.querySelector("[data-review-carousel]");
+
+if (reviewCarousel) {
+  const reviewSlides = [...reviewCarousel.querySelectorAll("[data-review-slide]")];
+  const reviewDots = [...reviewCarousel.querySelectorAll("[data-review-dot]")];
+  const previousReview = reviewCarousel.querySelector("[data-review-prev]");
+  const nextReview = reviewCarousel.querySelector("[data-review-next]");
+  const reviewToggle = reviewCarousel.querySelector("[data-review-toggle]");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let activeReview = 0;
+  let reviewTimer;
+  let rotationPaused = false;
+
+  const showReview = (index) => {
+    activeReview = (index + reviewSlides.length) % reviewSlides.length;
+
+    reviewSlides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeReview;
+      slide.classList.toggle("is-active", isActive);
+      slide.setAttribute("aria-hidden", String(!isActive));
+    });
+
+    reviewDots.forEach((dot, dotIndex) => {
+      if (dotIndex === activeReview) {
+        dot.setAttribute("aria-current", "true");
+      } else {
+        dot.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const stopReviewRotation = () => window.clearInterval(reviewTimer);
+  const startReviewRotation = () => {
+    stopReviewRotation();
+    if (!rotationPaused && !reduceMotion.matches && !document.hidden) {
+      reviewTimer = window.setInterval(() => showReview(activeReview + 1), 6000);
+    }
+  };
+
+  const updateReviewToggle = () => {
+    if (!reviewToggle) return;
+    reviewToggle.disabled = reduceMotion.matches;
+    reviewToggle.setAttribute("aria-pressed", String(rotationPaused));
+    reviewToggle.textContent = reduceMotion.matches
+      ? "Rotation off"
+      : rotationPaused
+        ? "Resume rotation"
+        : "Pause rotation";
+  };
+
+  previousReview?.addEventListener("click", () => {
+    showReview(activeReview - 1);
+    startReviewRotation();
+  });
+
+  nextReview?.addEventListener("click", () => {
+    showReview(activeReview + 1);
+    startReviewRotation();
+  });
+
+  reviewDots.forEach((dot, dotIndex) => {
+    dot.addEventListener("click", () => {
+      showReview(dotIndex);
+      startReviewRotation();
+    });
+  });
+
+  reviewToggle?.addEventListener("click", () => {
+    rotationPaused = !rotationPaused;
+    updateReviewToggle();
+    startReviewRotation();
+  });
+
+  reviewCarousel.addEventListener("mouseenter", stopReviewRotation);
+  reviewCarousel.addEventListener("mouseleave", startReviewRotation);
+  reviewCarousel.addEventListener("focusin", stopReviewRotation);
+  reviewCarousel.addEventListener("focusout", startReviewRotation);
+  document.addEventListener("visibilitychange", startReviewRotation);
+  reduceMotion.addEventListener("change", () => {
+    updateReviewToggle();
+    startReviewRotation();
+  });
+
+  showReview(0);
+  updateReviewToggle();
+  startReviewRotation();
+}
+
 const contactDialog = document.createElement("dialog");
 contactDialog.className = "contact-dialog";
 contactDialog.id = "contact-form";

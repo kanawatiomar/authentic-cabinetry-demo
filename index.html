@@ -106,7 +106,7 @@
           </div>
           <a class="button review-link" href="https://share.google/Ay8kBWk230bGjixUl" target="_blank" rel="noopener">View All Google Reviews</a>
         </div>
-        <div class="review-carousel" data-review-carousel aria-roledescription="carousel" aria-label="Customer reviews">
+        <div class="review-carousel" data-review-carousel role="region" aria-roledescription="carousel" aria-label="Customer reviews">
           <div class="review-track" aria-live="polite">
             <blockquote class="review-slide is-active" data-review-slide aria-hidden="false">
               <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
@@ -126,10 +126,13 @@
           </div>
           <div class="review-controls">
             <button class="review-arrow" type="button" data-review-prev aria-label="Show previous review">&#8592;</button>
-            <div class="review-dots" aria-label="Choose a review">
-              <button type="button" data-review-dot aria-label="Show review 1" aria-current="true"></button>
-              <button type="button" data-review-dot aria-label="Show review 2"></button>
-              <button type="button" data-review-dot aria-label="Show review 3"></button>
+            <div class="review-control-center">
+              <div class="review-dots" aria-label="Choose a review">
+                <button type="button" data-review-dot aria-label="Show review 1" aria-current="true"></button>
+                <button type="button" data-review-dot aria-label="Show review 2"></button>
+                <button type="button" data-review-dot aria-label="Show review 3"></button>
+              </div>
+              <button class="review-toggle" type="button" data-review-toggle aria-pressed="false">Pause rotation</button>
             </div>
             <button class="review-arrow" type="button" data-review-next aria-label="Show next review">&#8594;</button>
           </div>
