@@ -2586,6 +2586,132 @@ body:not(.about-page) .page-hero::after {
   color: var(--white);
 }
 
+.trade-review-section {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.62fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 96px);
+  align-items: center;
+  background:
+    linear-gradient(120deg, rgba(211, 107, 44, 0.12), transparent 38%),
+    var(--paper);
+}
+
+.trade-review-copy {
+  max-width: 600px;
+}
+
+.trade-review-copy p:not(.eyebrow) {
+  max-width: 530px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.trade-review-card {
+  position: relative;
+  margin: 0;
+  padding: clamp(34px, 5vw, 68px);
+  overflow: hidden;
+  border-left: 6px solid var(--orange);
+  background: var(--green);
+  box-shadow: 0 24px 60px rgba(31, 79, 58, 0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.trade-review-card::before {
+  content: "\201C";
+  position: absolute;
+  top: -44px;
+  right: 28px;
+  color: rgba(255, 253, 248, 0.07);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 220px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.trade-review-card:hover {
+  box-shadow: 0 30px 74px rgba(31, 79, 58, 0.25);
+  transform: translateY(-4px);
+}
+
+.trade-review-stars {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  color: var(--orange-2);
+  font-size: 18px;
+  letter-spacing: 0.14em;
+}
+
+.trade-review-card > p {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0;
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(28px, 3.3vw, 48px);
+  line-height: 1.2;
+}
+
+.trade-review-card footer {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px 28px;
+  align-items: end;
+  margin-top: clamp(30px, 4vw, 48px);
+}
+
+.trade-review-card footer div {
+  display: grid;
+  gap: 5px;
+}
+
+.trade-review-card footer strong {
+  color: var(--white);
+  font-size: 16px;
+}
+
+.trade-review-card footer span {
+  color: rgba(255, 253, 248, 0.68);
+  font-size: 13px;
+}
+
+.trade-review-card footer a {
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255, 253, 248, 0.44);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.trade-review-card footer a:hover {
+  border-color: var(--orange-2);
+  color: var(--orange-2);
+}
+
+@media (max-width: 900px) {
+  .trade-review-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .trade-review-card {
+    padding: 30px 24px;
+  }
+
+  .trade-review-card footer {
+    align-items: start;
+  }
+}
+
 .trade-hero {
   display: grid;
   grid-template-columns: minmax(0, 0.72fr) minmax(420px, 0.76fr);
