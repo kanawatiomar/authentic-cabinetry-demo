@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap");
+
 :root {
   --paper: #f6f3ed;
   --paper-2: #ece6db;
@@ -12,6 +14,8 @@
   --photo: #ddd6ca;
   --shadow: 0 18px 50px rgba(24, 29, 24, 0.1);
   --max: 1180px;
+  --font-sans: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
   --wash: linear-gradient(180deg, rgba(31, 79, 58, 0.14), rgba(255, 253, 248, 0.96) 34%, rgba(211, 107, 44, 0.12));
   --wash-soft: linear-gradient(180deg, rgba(31, 79, 58, 0.08), rgba(255, 253, 248, 0.96) 38%, rgba(211, 107, 44, 0.08));
   --wash-reverse: linear-gradient(180deg, rgba(211, 107, 44, 0.13), rgba(255, 253, 248, 0.96) 36%, rgba(31, 79, 58, 0.12));
@@ -29,7 +33,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.55;
 }
 
@@ -1144,7 +1148,7 @@ body:not(.about-page) .page-hero::after {
 }
 
 .review-link {
-  margin-top: 28px;
+  margin-top: 0;
   border-color: rgba(255, 253, 248, 0.34);
   background: rgba(255, 253, 248, 0.07);
   color: var(--white);
@@ -1153,6 +1157,19 @@ body:not(.about-page) .page-hero::after {
 .review-link:hover {
   border-color: var(--white);
   background: rgba(255, 253, 248, 0.08);
+}
+
+.review-source-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.review-link.yelp:hover {
+  border-color: #ff6a6f;
+  background: rgba(211, 35, 35, 0.22);
 }
 
 .review-carousel {
@@ -1210,6 +1227,11 @@ body:not(.about-page) .page-hero::after {
   box-shadow: 0 34px 90px rgba(8, 27, 19, 0.32);
 }
 
+.review-slide.is-active:hover {
+  border-color: rgba(211, 107, 44, 0.48);
+  transform: translateX(-50%) scale(1.012);
+}
+
 .review-slide.is-prev {
   z-index: 1;
   opacity: 0.42;
@@ -1246,6 +1268,51 @@ body:not(.about-page) .page-hero::after {
 .review-slide footer strong {
   color: var(--green);
   font-size: 14px;
+}
+
+.review-platform {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: rgba(31, 79, 58, 0.09);
+  line-height: 1;
+}
+
+.review-platform.yelp {
+  background: rgba(211, 35, 35, 0.1);
+  color: #b51f24;
+}
+
+.review-card-link {
+  position: absolute;
+  inset: -1px;
+  z-index: 5;
+  color: var(--green);
+  cursor: pointer;
+}
+
+.review-card-link span {
+  position: absolute;
+  right: clamp(24px, 3vw, 38px);
+  bottom: clamp(22px, 3vw, 34px);
+  padding-bottom: 2px;
+  border-bottom: 1px solid rgba(31, 79, 58, 0.3);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.review-card-link:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: -7px;
+}
+
+.review-card-link:hover span {
+  border-color: var(--orange);
+  color: var(--orange);
 }
 
 .review-stars {
@@ -1348,6 +1415,11 @@ body:not(.about-page) .page-hero::after {
     width: calc(100% - 8px);
     min-height: 310px;
     padding: 32px 26px;
+  }
+
+  .review-card-link span {
+    right: 24px;
+    bottom: 22px;
   }
 
   .review-slide.is-prev,
@@ -4276,5 +4348,150 @@ body.modal-open {
     width: 58px;
     height: 58px;
     font-size: 22px;
+  }
+}
+
+/* Standardized type system: one size per content role. */
+:root {
+  --type-page-title: 56px;
+  --type-section-title: 42px;
+  --type-card-title: 24px;
+  --type-quote: 28px;
+  --type-body-large: 18px;
+  --type-body: 16px;
+  --type-small: 14px;
+  --type-label: 12px;
+}
+
+body {
+  font-size: var(--type-body);
+}
+
+h1,
+h2,
+.intro p,
+.review-quote,
+.review-slide p,
+.trade-review-card > p {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.brand strong,
+.site-footer span,
+.hero-proof strong,
+.hero-panel dt,
+.home-photo-link strong,
+.why-grid strong,
+.icon-process strong,
+.home-process .icon-process span,
+.home-link-grid strong,
+.photo-gallery-grid h3,
+.project-tile h3,
+.service-step-grid h3,
+.audience-grid strong,
+.service-copy h3,
+.process-workflow .icon-process span,
+.workflow-diagram span,
+.workflow-diagram strong,
+.resource-grid strong,
+.trust-grid strong,
+.contact-card-grid strong,
+.google-review-card strong {
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+h1,
+.page-hero h1,
+.portfolio-hero h1,
+.gallery-category-hero h1,
+.services-hero h1 {
+  font-size: var(--type-page-title);
+}
+
+h2,
+.intro p,
+.contact-details h2,
+.form-heading h2,
+.contact-dialog-heading h2 {
+  font-size: var(--type-section-title);
+}
+
+h3,
+.home-photo-link strong,
+.why-grid strong,
+.home-link-grid strong,
+.photo-gallery-grid h3,
+.project-tile h3,
+.service-step-grid h3,
+.audience-grid strong,
+.workflow-diagram strong,
+.resource-grid strong,
+.google-review-card strong,
+.hero-proof strong,
+.hero-panel dt,
+.icon-process strong,
+.trust-grid strong,
+.contact-card-grid strong {
+  font-size: var(--type-card-title);
+  line-height: 1.25;
+}
+
+.service-copy h3 {
+  font-size: var(--type-section-title);
+  line-height: 1.12;
+}
+
+.review-quote,
+.review-slide p,
+.trade-review-card > p {
+  font-size: var(--type-quote);
+}
+
+.hero-lede,
+.page-hero p:not(.eyebrow),
+.portfolio-hero p:not(.eyebrow),
+.services-hero p:not(.eyebrow),
+.contact-page .page-hero p:not(.eyebrow) {
+  font-size: var(--type-body-large);
+}
+
+.primary-nav,
+.header-cta,
+.button,
+.text-link,
+.site-footer,
+.brand small {
+  font-size: var(--type-small);
+}
+
+.eyebrow {
+  font-size: var(--type-label);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@media (max-width: 680px) {
+  :root {
+    --type-page-title: 42px;
+    --type-section-title: 34px;
+    --type-card-title: 22px;
+    --type-quote: 24px;
+  }
+
+  h1,
+  .page-hero h1,
+  .portfolio-hero h1,
+  .gallery-category-hero h1,
+  .services-hero h1 {
+    font-size: var(--type-page-title);
+    line-height: 1.08;
+  }
+
+  h2 {
+    font-size: var(--type-section-title);
   }
 }

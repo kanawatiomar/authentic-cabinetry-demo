@@ -35,6 +35,8 @@ if (reviewCarousel) {
       slide.classList.toggle("is-next", relativePosition === 1);
       slide.classList.toggle("is-prev", relativePosition === reviewSlides.length - 1);
       slide.setAttribute("aria-hidden", String(!isActive));
+      const reviewLink = slide.querySelector(".review-card-link");
+      if (reviewLink) reviewLink.tabIndex = isActive ? 0 : -1;
     });
 
     reviewDots.forEach((dot, dotIndex) => {
