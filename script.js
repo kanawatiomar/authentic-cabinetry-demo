@@ -120,8 +120,8 @@ contactDialog.innerHTML = `
     <form class="quote-form contact-modal-form" action="https://formsubmit.co/Authentic_Cabinetry@outlook.com" method="post">
       <input type="hidden" name="_subject" value="New contact request from the Authentic Cabinetry website">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://kanawatiomar.github.io/authentic-cabinetry-demo/thank-you.html">
-      <input type="hidden" name="_url" value="https://kanawatiomar.github.io/authentic-cabinetry-demo/">
+      <input type="hidden" name="_next" value="https://authentic-cabinetry.com/thank-you.html">
+      <input type="hidden" name="_url" value="https://authentic-cabinetry.com/">
       <input type="hidden" name="_autoresponse" value="Thank you for contacting Authentic Cabinetry. We received your information and will follow up soon.">
       <label class="form-honeypot" aria-hidden="true">Leave this field empty<input name="_honey" tabindex="-1" autocomplete="off"></label>
       <label>Name<input name="Name" autocomplete="name" required></label>
